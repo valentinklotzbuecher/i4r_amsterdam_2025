@@ -1,0 +1,529 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{tmargin=1in,bmargin=1in,lmargin=1.2in,rmargin=1.2in}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{ae,aecompl}
+\usepackage[multiple]{footmisc}
+\usepackage[hyperfootnotes=false]{hyperref}
+\usepackage{bookmark}
+\hypersetup{colorlinks=true,citecolor=blue}
+\usepackage{amsthm}
+\usepackage{MJOARTI}
+\usepackage{setspace}
+%\onehalfspacing
+%\doublespacing
+%\usepackage{vmargin}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{bbold}
+\usepackage{lscape}
+\usepackage{subfigure}
+\usepackage{caption}
+\usepackage{hyperref}
+%\usepackage{floatrow}
+\usepackage{lscape}
+\usepackage{ifthen}
+\usepackage{url}
+\usepackage{blkarray}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{enumerate}
+\usepackage{supertabular}
+\usepackage{fancyhdr}
+\usepackage{epstopdf}
+\usepackage{dsfont}
+\usepackage{url}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage{eurosym}
+\usepackage{arydshln}
+\usepackage{natbib}
+\usepackage{threeparttable} % for notes below a table
+\usepackage{comment}
+
+\newcommand\citeapos[1]{\citeauthor{#1}'s (\citeyear{#1})}
+\newtheorem{theorem}{Theorem}
+\newtheorem{algorithm}{Algorithm}
+\newtheorem{axiom}{Axiom}
+\newtheorem{case}{Case}
+\newtheorem{claim}{Claim}
+\newtheorem{conclusion}{Conclusion}
+\newtheorem{assumption}{Assumption}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{condition}{Condition}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{criterion}{Criterion}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{exercise}{Exercise}
+\newtheorem{lemma}{Lemma}
+\newtheorem{notation}{Notation}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newtheorem{solution}{Solution}
+\newtheorem{summary}{Summary}
+\newtheorem{class}{Class}
+\usepackage{array}
+\newcolumntype{k}{>{\centering\arraybackslash}p{2cm}}
+\usepackage{longtable}
+\usepackage{ltcaption}
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{textcomp}
+\definecolor{dark-red}{rgb}{0.6,0,0}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{darkgreen}{rgb}{0,0.4,0}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+
+
+%\setlength{\absleftindent}{-0.25in} % For Restart
+%\setlength{\absrightindent}{-0.25in} % For Restart
+
+%\renewcommand\thesection{\Roman{section}.}
+%\renewcommand\thesubsection{\Alph{subsection}.}
+
+\begin{document}
+
+\date{March 25, 2024}
+
+\title{
+\textbf{A comment on } \\[0.25cm]
+\textbf{``They Never had a Chance: Unequal Opportunities and Fair Redistributions''}%
+%
+ \thanks{
+Authors: Klotzbücher: University of Freiburg and University Hospital Basel. E-mail: \href{mailto:valentin.klotzbuecher@usb.ch}{valentin.klotzbuecher@usb.ch};
+ Krieger: University of Freiburg and CESifo. E-mail: \href{mailto:tim.krieger@econ.uni-freiburg.de}{tim.krieger@econ.uni-freiburg.de};
+Wallner: Independent researcher
+%Brodeur: University of Ottawa and IZA. E-mail: \href{mailto:abrodeur@uottawa.ca}%
+%{abrodeur@uottawa.ca}. For each author: List your affiliation(s) and contact information. Indicate who is the corresponding author if multiple authors. For each author: Acknowledge any financial support or conflict of interest. Describe your relationship with the original author(s) if there is a conflict of interest. Examples of conflict of interest include, but are not limited to, being a colleague, collaborator, current or former student, former thesis supervisor or family member. See I4R’s conflict of interest policy here: \url{https://i4replication.org/conflict.html}.
+}
+}
+\author{Valentin Klotzbücher \and Tim Krieger \and Marco Wallner}
+
+\maketitle
+
+\renewcommand{\abstractname}{Abstract}
+\begin{abstract}
+
+
+%---------------------------------------------------------------------------------%
+%INSTRUCTIONS:
+%Summarize in few sentences the original study, focusing on the main results in the original abstract in terms of word claim  which you attempt to reproduce or replicate. Provide information, if relevant, on the magnitude and statistical significance of the main results. Then report all your reproduction and replication results. 
+
+%In the event that there are too many robustness tests per claim to report them individually in the Abstract, then report a summary measure such as the fraction of tests that replicates (i.e., statistically significant in the same direction as the original result) for each claim and the average relative size of the tests for each claim (or the average of these measures across the clams if there are also too many claims being reproduced or replicated to report them individually in the Abstract).
+
+%See below definitions: 
+
+%Computational Reproducibility: The ability to duplicate the results of a prior study using the same data and procedures as were used by the original investigator. Computational reproducibility is done using the same computer code (possibly rebuilt from scratch), but can be achieved using a different software package.
+
+%Recreate reproducibility: Tests to what extent results in original studies can be reproduced using the information in the original studies without access to the processed data set and/or the analysis code.
+
+%Robustness Reproducibility: Tests to what extent results in original studies are robust to alternative plausible analytical decisions using the same data as in the original studies.
+
+%Direct Replicability: The ability to duplicate the results of a prior study using new data but the same procedures as were used by the original investigator.
+
+%Conceptual Replicability: The ability to duplicate the results of a prior study using new data and different procedures as were used by the original investigator.
+%---------------------------------------------------------------------------------%
+
+\small{
+%Speedy Analyst et al. (2022) examine the effect of a policy implemented in the fictional country Labas. In their preferred analytical specification, the authors find that the policy (PROSCOL) increased educational attainment of the treated group by 33 percentage points and decreased fertility by 9.8\%. Their point estimates are statistically significant at the 5\% and 10\% levels, respectively. First, we successfully computationally reproduce the main claims of the paper, but uncover two minor coding errors which have no effect on the studies’ main results. Second, we directly replicate the results by adding more years to the sample. We find that adding more years to the sample decreases the size of the point estimate by one-third for education and by one-fourth for fertility. The point estimate for fertility becomes statistically insignificant at the 10\% level, while it remains significant at the 5\% level for education. Third, we test the sensitivity of the results to changing how standard errors are clustered. Clustering at the region level makes the point estimates for education and fertility to be statistically insignificant at the 10\% level. 
+
+
+\\
+We reproduce the study by \cite{dong2025}
+
+%\underline{Example for a \textit{direct replication} of an experimental study:} We conduct a direct replication of the paper by using the same procedures (i.e., method and analysis) and new data. We confirm the sign, magnitude and statistical significance of the point estimates for outcome X.
+} \newline
+
+
+\textsc{Keywords}: \newline
+
+\textsc{JEL codes}: 
+\end{abstract}
+
+\clearpage
+
+
+%%---------------------------------------------------------------------------------
+%\section*{Introduction: Instructions}
+%\begin{footnotesize}
+%\begin{spacing}{1.0}
+%Briefly describe the main data sources, method, policy or treatment, time period and population for which the estimates apply. Then describe the main scientific claims (descriptive or causal) and robustness checks if those that are relevant for your re-analysis or replication. Quote the original part of the study that has the main scientific claim(s) including page number(s). As suggested in the Guide for Accelerating Computational Reproducibility in the Social Sciences (https://bitss.github.io/ACRE/), structure your summary of the main findings and methodology as follows: "The paper tested the effect of X on Y for population P, using method M. The main results show an effect of magnitude E (specify units and standard errors)" or "The paper estimated the value of Y (estimated or predicted) for population P under dimensions X using method M. The main results presented an estimate of magnitude E (specify units and standard errors)". This template assumes that the paper’s scientific claims are focused on estimating a causal relationship. In the event that the original study is estimating/predicting a descriptive statistic of a population, or something else, then describe and quote the results accordingly using precise claims from the original study. \\
+
+%How to select claims to reproduce/replicate? There are three possibilities; (1) select claims for all "hypotheses tests" in the original study, (2) select claims mentioned in the abstract or (3) select claims for what is considered the main result in the paper as stated by the original author(s). For the last option, provide a quote from the original study confirming that the claim chosen is considered the main result by the original author(s). \\      
+
+%Next, summarize your reproduction and/or replication. Start by stating how you have obtained the data and codes and if the original author(s) answered your request(s) and questions. Indicate the repository where your programs and data are located. Then proceed with a description of your computational reproducibility by describing if you have found coding error(s) and how they affect the main conclusions. \\
+
+%For robustness reproduction, clearly state your robustness checks and how they affect the main point estimates. For replication, clearly describe the new data. \\
+
+%For all reproduction/replication types, be precise and summarize your results as follows: ``Implementing this robustness increases/decreases the size of the main point estimate for outcome Y by X and the estimate is not anymore statistically significant at the X\% level'' or ``Implementing this robustness check has no effect on the magnitude or the statistical significance of the main point estimate.'' Also report the coefficient (or other effect size), the standard error of the coefficient/effect size, the test statistic including degrees of freedom if relevant, and the p-value for all tests. \\
+
+%Uphold a professional and constructive tone throughout the reproduction report, fostering a collaborative and supportive environment for the reproduction process.
+%In case you have questions while going through this template, please do not hesitate to contact the I4R team. \\
+%\end{spacing}
+%\end{footnotesize}
+
+%\clearpage 
+%%---------------------------------------------------------------------------------
+
+
+\section{Introduction: Example}
+\begin{spacing}{1.5}
+\cite{analyst_2022}, henceforth SSD, investigate the impact of a program called PROSCOL. The setting is the country of Labas. In 2000, its government introduced an antipoverty program in northwest Labas \citep{ravallion2001mystery}. The program aims to provide cash transfers to poor families with school-age children. To be eligible to receive the transfer, households must have certain observable characteristics that suggest they are poor.
+
+SSD tested the effect of the policy (PROSCOL) on school enrollment and fertility for low-income families, using a difference-in-differences approach comparing the treated region (Labas) to untreated regions before/after the implementation of the policy. The main data set comes from the Labas Social Survey from 1998 to 2002. SSD's describe their main results on p.7 as follows:  ``We show that the policy (PROSCOL) increased school enrollment rates for the treated group by 30 percentage points and decreased the number of children born by 0.10 per family (mean of the dependent variable is 3.4). Our point estimates are statistically significant at the 5\% level.''%
+\footnote{Report the statistical significance used by the original authors.}
+
+In the present report prepared for the Institute for Replication \citep{I4R_MetaPaper}, we investigate whether their analytical results are computationally reproducible and further test their replicability and robustness to: (1) adding more years to the sample and (2) changing how standard errors are clustered. In their original analysis, SSD rely on data from 1998 to 2002 and cluster their standard errors at the region/year level. In our re-analysis, we extend the time period to 1998 to 2004 and cluster the standard errors at the region level. We are grateful to the original authors for providing the raw data, which was not included in the replication package.  
+
+In terms of reproducibility, we would like to acknowledge that the original study was successfully reproduced by the data editor's team at the American Economic Review. We also successfully reproduced SSD's main tables (Tables 4 and 5) using their codes, although there were very small discrepancies in the magnitude of the main point estimates for Table 5 due to coding errors. We uncovered two minor coding errors; (1) coding the control variable Age and (2) the gender dummy was included as a continuous variable in one regression. 
+
+In terms of replication, we add more years to the sample. We find that adding more years to the sample decreases the size of the main point estimate by one-third for educational attainment and by one-fourth for fertility. The point estimate for fertility becomes statistically insignificant at the 5\% level, while it remains significant at the 5\% level for education. 
+
+We then turn to sensitivity analysis [robustness reproduction]. We test the robustness of the results to changing how standard errors are clustered. Clustering at the region level makes the point estimates to be statistically insignificant at the 5\% level.
+\end{spacing}
+
+%\clearpage
+%
+%%---------------------------------------------------------------------------------
+%\section*{Computational Reproducibility: Instructions}
+%\begin{footnotesize}
+%\begin{spacing}{1.0}
+%Describe first the completeness of the replication package. Note whether there were ``No code'', ``Cleaning code (partial)'', ``Cleaning code (complete)'', ``Analysis code (partial)'' or ``Analysis code''. For the data, note whether there were ``No Data'', ``Raw Data (partial)'', ``Raw Data (complete)'', ``Analysis Data (partial)'' or ``Analysis Data (complete)''. \\
+
+%Then describe which of the following best describes the computational reproducibility (i.e. duplicating the results using the provided code) of the original authors' paper:
+%\begin{enumerate}
+%\item \textit{Not Computationally Reproducible from Analysis Data}: analysis code with analysis data fails to run, or, produces results inconsistent with the paper.  
+%\item \textit{Computationally Reproducible from Analysis Data}: analysis code with analysis data produces the same output as presented in the paper.  \
+%\item \textit{Computationally Reproducible from Raw Data}: cleaning code and analysis code start from raw data and reproduce the output presented in the paper. \\
+%\end{enumerate}
+
+%Then, describe in detail if you have uncovered coding error(s) and how they affect the main conclusions. In the event that the sign, magnitude or statistical significance is changed for the main estimates or robustness checks, report the new point estimates (e.g., in a table) in this section. \\
+	
+%Fix the coding error(s) prior to conducting the rest of the analysis, but make sure to clearly state and disentangle the effect of the coding error(s) vs the change(s) made to the data and codes/procedures in the following sections. \\ 
+%\end{spacing}
+%\end{footnotesize}
+
+%\clearpage
+%%---------------------------------------------------------------------------------
+
+\section{Computational Reproducibility (Example)}
+%(see above for instructions)%
+
+\begin{spacing}{1.5}
+We used the replication package here: \href{https://youtu.be/dQw4w9WgXcQ?si=0Yf0yZeha80GyZll}{hyperlink}. The cleaning codes were provided in the replication package, but only the analysis data were provided. The Institute for Replication reached out to the authors who provided us the raw data. We successfully computationally reproduced all the main results (\textit{i.e.}, Tables 2, 3 and 4) from the raw data. See Table \ref{tab:reppkg_table} for details.
+
+\begin{table}[h]
+\centering
+\caption{Replication Package Contents and Reproducibility}
+\label{tab:reppkg_table}
+\footnotesize 
+	\begin{tabular}{lccc}
+	\hline \hline
+	\\
+	\textbf{Replication Package Item} 	& \textbf{Fully} & \textbf{Partial} & \textbf{No} \\
+	\hline
+	\\
+	Raw data provided                 	& \checkmark &  &  \\ 
+	Analysis data provided				& \checkmark &  &  \\ 
+	\\
+	Cleaning code provided				& &  & \checkmark \\ 
+	Analysis code provided				& \checkmark &  & \checkmark \\ 
+	\\
+	Reproducible from raw data			&  &  & \checkmark \\ 
+	Reproducible from analysis data		& \checkmark &  &  \\ 
+	\\
+	\hline \hline
+	\end{tabular}
+\caption*{
+\footnotesize \emph{Notes}: This table summarizes the replication package contents contained in \cite{analyst_2022}. \textbf{Displayed here only for replicators knowledge. Please put a similar table in your Tables appendix.}}
+\end{table}
+
+We describe in this section two minor coding errors that we uncovered while reproducing the study. First, we noticed that the coding of the control variable Age was incorrect. Age was defined as the age of the mother in the paper but coded using the variable age of the head of the household in the codes. Second, the gender dummy was included as a continuous variable in one regression. Our codes/programs are available \href{https://youtu.be/dQw4w9WgXcQ?si=0Yf0yZeha80GyZll}{here} (\textit{e.g.} OSF webpage with DOI).\footnote{Make sure to cite and clearly reference your data and codes.} The original authors' updated codes are available \href{https://youtu.be/dQw4w9WgXcQ?si=0Yf0yZeha80GyZll}{here} (\textit{e.g.} OSF webpage with DOI).
+
+We re-run the codes correcting these two errors and reproduce the results for the outcome variable fertility in Table 1. (The specification for educational attainment does not include these control variables.) The structure of the table is the same as in the original study. We find that the point estimates are strikingly similar, with the sign, magnitude and statistical significance being remarkably similar.
+\end{spacing}
+
+%%---------------------------------------------------------------------------------
+%\subsection*{Discrepancies Between Pre-analysis Plan and Article (Optional)}
+%\begin{footnotesize}
+%\begin{spacing}{1.0}
+%
+%Check whether the authors registered the study and published a pre-analysis plan (PAP). Please note, which of the following cases applies:
+%\begin{itemize}
+%\item No preregistration
+%\item Preregistration without a PAP
+%\item Preregistration with a PAP
+%\end{itemize}
+%
+%If you have access to the PAP, you may compare it to the original paper and highlight deviations. Particularly, check for the following:
+%\begin{itemize}
+%\item Does the PAP specify the exact design of the study, the exact data collection and exactly how all analyses and tests will be conducted?
+%\item Does the paper follow the pre-registered design and data collection?
+%\item Does the paper carry out all analyses and tests reported in the paper exactly as specified in the PAP?
+%\item Does the paper report all analyses and tests as specified in the PAP?
+%\item Does the paper report additional analyses and tests not specified in the PAP?
+%\end{itemize}
+%
+%For all deviations from the PAP, state whether the paper clearly mentions and explains this deviation. For example, does the paper mark deviations from the PAP as ``exploratory''?
+%\end{spacing}
+%\end{footnotesize}
+%
+%\clearpage
+%%---------------------------------------------------------------------------------
+
+\subsection{Discrepancies Between Pre-analysis Plan and Article (Example)}
+\textbf{Mandatory for \textit{Psychological Science}}. Optional for all other journals.
+\\[0.25cm]
+The authors did not register a pre-analysis plan.
+
+
+%%---------------------------------------------------------------------------------
+%\section{Robustness Reproduction and Replication with New Data: Instructions}
+%\begin{footnotesize}
+%\begin{spacing}{1.0}
+%
+%Clearly state/describe which type of reproduction/replication you are conducting. See definitions at the beginning of this document. For robustness reproduction, present your robustness checks and how they impact the main point estimates one by one so that it is clear how each modification to the specification/analysis impacts the main conclusions. Then you may combine them. Also, clearly state why you conduct each specific robustness check and/or modify the setting/model. \\
+%
+%Do not confuse general critiques of the original research with replication or robustness checks (Brown and Wood, 2018). For instance, any critique of the design or methodology (e.g., qualitatively discussing the validity of an exclusion restriction for an instrumental variable) should not be included unless it is to justify the validity of a robustness check (or using new data).
+%
+%Report all executed robustness checks, without any selective reporting (cherry-picking), to ensure a comprehensive and hence unbiased representation of the findings.
+%
+%\end{spacing}
+%\end{footnotesize}
+%
+%%---------------------------------------------------------------------------------
+
+\section{Robustness Reproduction and Replication with New Data (Example)}
+%(see above for instructions)%
+
+\begin{spacing}{1.5}
+We now turn our attention to our replication. We test the robustness of the results to a direct replication by adding more years to the sample and a robustness replicability by changing how standard errors are clustered. We add more years to the sample to increase the sample size as the original study was underpowered (e.g., 40\% power). We cluster the standard errors at the region level instead of at the region/year level to account for non-independence between years within each region.
+
+The decision to conduct these two robustness checks was taken after reading the paper but prior to observing the codes/programs.\footnote{You should be honest about whether your sensitivity analysis was conceived before or after looking at the programs of the original author(s) and state whether your replication or sensitivity analysis was pre-registered.} We pre-registered our sensitivity analysis \href{https://youtu.be/dQw4w9WgXcQ?si=0Yf0yZeha80GyZll}{here} (\textit{e.g.} hyperlink to your pre-analysis plan).
+
+\subsection{Regression model}
+
+For our analysis, we rely on the same specifications and a difference-in-differences analysis comparing the treated region (Labas) to untreated regions before/after the implementation of the policy, restricting the sample to low-income families.\footnote{Make sure to mention the main statistical or econometric method used to examine each claim and whether the method that you use is the same as in the original study. Also, you should state and rely on the original authors’ preferred specification (or yours, if the authors are not clear).} The analysis is at the region/year level for the educational attainment outcome and at the family level for the fertility outcome. See the original study for more details and equations. See an example of what to write if the specification, model or method is different in Appendix I.
+
+
+\subsection{Results educational attainment}
+
+\subsubsection{Extending the time period}
+
+We first investigate whether extending the time period to 2004 has an impact on the sign, magnitude and statistical significance of the difference-in-differences model for educational attainment. For this analysis, an observation is a region/year. The sample is restricted to low-income families and collapsed at the region/year level. There are 20 regions and seven years. The dependent variable, educational attainment, is the fraction of low-income families with all school-age children attending school in a region in a year. Robust standard errors are in parentheses, clustered by region/year. Our findings are reported in Table 2. Column 1 reports the preferred estimates from the original study.\footnote{It is useful to offer a direct comparison to the original authors‘ estimates, for instance, in the first column of your tables. Another option is to reproduce the entire table. See the Appendix for a reproduction of the original authors’ point estimates (Table 4 in their paper).}
+
+The preferred specification, as determined by the original authors, is presented in column 2. Column 3 adds control variables as in the original study. We find that the policy (PROSCOL) increased school enrollment rates for the treated group by 21 percentage points (in comparison to 30 percentage points in the original study). The point estimate remains statistically significant at the 5% level.
+
+\subsubsection{Clustering}
+
+We then investigate whether changing the clustering technique affects the main point estimates for educational attainment. Robust standard errors are in parentheses, clustered by region are reported in Table 3. Recall that the original study clustered by region/year. Column 1 reports the preferred estimates from the original study. We find that the point estimate for the preferred specification (column 2) is not anymore statistically significant at the 5\% level. The standard error is now much larger (0.235) than in the original study (0.151).\footnote{Be careful to not label differences between your estimates and the original author(s) estimates as mistakes or errors. Rather, help the reader better understand why you conducted a specific robustness check or modified the setting/model.}
+
+\subsection{Fertility}
+
+\subsubsection{Extending the time period}
+
+We turn to the second outcome variable, fertility, in this subsection. We first extend the time period to 2004. For this analysis, an observation is a family. The sample is restricted to low-income families. The dependent variable is the number of children and the mean of the dependent variable is 3.3 (3.4 in the original study). Robust standard errors are in parentheses, clustered by region/year. Our findings are reported in Table 4. Column 1 reports the preferred estimates from the original study.
+We find that adding more years to the sample decreases the size of the main point estimate by one-fourth; the point estimate in column 2 (preferred specification) is now -0.075, while it was -0.098 in the original study. The point estimate becomes statistically insignificant at the 5\% level (standard error 0.058).
+
+
+\subsubsection{Clustering}
+
+We now turn to changing the clustering technique for fertility. Robust standard errors are in parentheses, clustered by region are reported in Table 5. We find that the point estimate for the preferred specification (column 2) is not anymore statistically significant at the 5\% level. The standard error is now much larger (0.075) than in the original study (0.055).
+
+\subsection{Extending time period and clustering}
+
+We now explore the effect of changing the time period and clustering simultaneously on the two main dependent variables. The estimates are presented in Tables 6 and 7. Overall, we confirm our previous conclusions. 
+
+\end{spacing}
+\section{Conclusion}
+%%---------------------------------------------------------------------------------
+%Instructions
+%State the most important results of your work and what you have learned. You may also describe other empirical exercises that could be conducted by other replicators.
+%%---------------------------------------------------------------------------------
+
+\clearpage
+
+
+%%---------------------------------------------------------------------------------
+\bibliographystyle{kluwer}
+\bibliography{biblio}
+
+\clearpage
+
+
+%%---------------------------------------------------------------------------------
+\section{Figures}
+
+\textbf{Insert figures here.}
+
+\clearpage 
+
+
+%%---------------------------------------------------------------------------------
+\section{Tables}
+
+\begin{footnotesize}
+
+
+\begin{table}[H]
+   \centering
+   \caption{Coding error: Fertility} \label{tab:table1}
+   \begin{threeparttable}
+         \footnotesize 
+    \input{Tables/table1} 
+        \begin{tablenotes}
+        \scriptsize 
+        \item{Notes: Authors’ calculations using data from 1998--2002. Mention data sources here. An observation is a family. The sample is restricted to low-income families. There are 20 regions and five years. The dependent variable is the number of children. Robust standard errors are in parentheses, clustered by region/year. Significant at the ***[1\%] **[5\%] *[10\%] level.
+}
+        \end{tablenotes}  
+   \end{threeparttable}                          
+\end{table}
+
+%%---------------------------------------------------------------------------------
+
+\begin{table}[H]
+   \centering
+   \caption{Impact of the treatment on educational attainment: Changing time period} \label{tab:table2}
+   \begin{threeparttable}
+         \footnotesize 
+    \input{Tables/table2} 
+        \begin{tablenotes}
+        \scriptsize 
+        \item{Notes: Authors’ calculations using data from 1998--2004. Mention data sources here. An observation is a region/year. The sample is restricted to low-income families and collapsed at the region/year level. There are 20 regions and seven years. The dependent variable, educational attainment, is the fraction of low-income families with all school-age children attending school in a region in a year. Robust standard errors are in parentheses, clustered by region/year. Significant at the ***[1\%] **[5\%] *[10\%] level.
+}
+        \end{tablenotes}  
+   \end{threeparttable}                          
+\end{table}
+
+%%---------------------------------------------------------------------------------
+
+\begin{table}[H]
+   \centering
+   \caption{Impact of the treatment on educational attainment: Changing clustering} \label{tab:table3}
+   \begin{threeparttable}
+         \footnotesize 
+    \input{Tables/table3} 
+        \begin{tablenotes}
+        \scriptsize 
+        \item{Notes: Authors’ calculations using data from 1998--2002. Mention data sources here. An observation is a region/year. The sample is restricted to low-income families and collapsed at the region/year level. There are 20 regions and five years. The dependent variable, educational attainment, is the fraction of low-income families with all school-age children attending school in a region in a year. Robust standard errors are in parentheses, clustered by region. Significant at the ***[1\%] **[5\%] *[10\%] level.
+}
+        \end{tablenotes}  
+   \end{threeparttable}                          
+\end{table}
+
+%%---------------------------------------------------------------------------------
+
+\begin{table}[H]
+   \centering
+   \caption{Impact of the treatment on fertility: Changing time period} \label{tab:table4}
+   \begin{threeparttable}
+         \footnotesize 
+    \input{Tables/table4} 
+        \begin{tablenotes}
+        \scriptsize 
+        \item{Notes: Authors’ calculations using data from 1998-2004. Mention data sources here. An observation is a family. The sample is restricted to low-income families. There are 20 regions and seven years. The dependent variable is the number of children. Robust standard errors are in parentheses, clustered by region/year. Significant at the ***[1\%] **[5\%] *[10\%] level.
+}
+        \end{tablenotes}  
+   \end{threeparttable}                          
+\end{table}
+
+%%---------------------------------------------------------------------------------
+
+\begin{table}[H]
+   \centering
+   \caption{Impact of the treatment on fertility: Changing clustering} \label{tab:table5}
+   \begin{threeparttable}
+         \footnotesize 
+    \input{Tables/table5} 
+        \begin{tablenotes}
+        \scriptsize 
+        \item{Notes: Authors’ calculations using data from 1998-2002. Mention data sources here. An observation is a family. The sample is restricted to low-income families. There are 20 regions and five years. The dependent variable is the number of children. Robust standard errors are in parentheses, clustered by region. Significant at the ***[1\%] **[5\%] *[10\%] level.
+}
+        \end{tablenotes}  
+   \end{threeparttable}                          
+\end{table}
+
+%%---------------------------------------------------------------------------------
+
+\begin{table}[H]
+   \centering
+   \caption{Impact of the treatment on educational attainment: Changing time period and clustering} \label{tab:table6}
+   \begin{threeparttable}
+         \footnotesize 
+    \input{Tables/table6} 
+        \begin{tablenotes}
+        \scriptsize 
+        \item{Notes: Authors’ calculations using data from 1998--2004. Mention data sources here. An observation is a region/year. The sample is restricted to low-income families and collapsed at the region/year level. There are 20 regions and seven years. The dependent variable, educational attainment, is the fraction of low-income families with all school-age children attending school in a region in a year. Robust standard errors are in parentheses, clustered by region. Significant at the ***[1\%] **[5\%] *[10\%] level.
+}
+        \end{tablenotes}  
+   \end{threeparttable}                          
+\end{table}
+
+%%---------------------------------------------------------------------------------
+
+\begin{table}[H]
+   \centering
+   \caption{Impact of the treatment on fertility: Changing time period and clustering} \label{tab:table7}
+   \begin{threeparttable}
+         \footnotesize 
+    \input{Tables/table7} 
+        \begin{tablenotes}
+        \scriptsize 
+        \item{Notes: Authors’ calculations using data from 1998-2004. Mention data sources here. An observation is a family. The sample is restricted to low-income families. There are 20 regions and seven years. The dependent variable is the number of children. Robust standard errors are in parentheses, clustered by region/year. Significant at the ***[1\%] **[5\%] *[10\%] level.
+}
+        \end{tablenotes}  
+   \end{threeparttable}                          
+\end{table}
+
+\end{footnotesize}
+
+\clearpage
+
+
+%%---------------------------------------------------------------------------------
+\section{APPENDIX}
+
+\textbf{Example of what to write if the replicator(s)’ specification, model or method differs from the original study for the sensitivity analysis.}
+
+We test the claim that PROSCOL impacted enrollment rates and the number of children born for treated regions in comparison to control regions using a triple differences model comparing low-income and high-income families in treated and control regions before/after the implementation of the policy. This setting contrasts with the original study which relies on a difference-in-differences comparing treated regions to untreated before/after the implementation of the policy for low-income families. Our equation is:
+\begin{multline}
+Y_{irt} = \alpha + \beta_{1} Treated_{rt} + \beta_{2} LowIncome_{irt} + \beta_{3} After{t} +  \beta_{4} Treated_{t} \times LowIncome_{irt} \\ +  \beta_{5} Treated_{rt} \times After_{t} +  \beta_{6} LowIncome_{irt} \times After_{t} \\ +  \beta_{7} Treated_{rt} \times LowIncome_{irt} \times After_{t} + \zeta X_{irt} + \epsilon_{irt}
+\end{multline}
+
+where the dependent variable is the number of children born for individual \textit{i} in region \textit{r} in time \textit{t}. The time period is 1998--2004 (1998--2002 in the original study) and an observation is a family (head of the family for the control variable). Treated region is an indicator which is set to 1 if the respondent lives in the treated region (northwest region of Labas), Low Income indicates whether the family is low-income, and After is a variable that takes the value 1 if the year is after 1999.  The interaction of Low Income and Treated Region determines the treated group, while the additional interaction with After shows the effect of the treatment. The coefficient of interest is $\beta_{7}$. $X_{irt}$ represents a vector of family socioeconomic variables (head of the family). We use robust standard errors and cluster the error term at the region level (region/year level in the original study).
+
+%\subsection{}\label{S-}
+
+\clearpage 
+
+%%---------------------------------------------------------------------------------
+\renewcommand{\thefigure}{A\arabic{figure}}
+\renewcommand{\thetable}{A\arabic{table}}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+
+\section{Appendix Figures}
+
+\textbf{Insert figures here.}
+
+\clearpage
+
+%%---------------------------------------------------------------------------------
+\section{Appendix Tables}
+
+\textbf{Here, you may reproduce the main tables (Tables 4 and 5) from the original study.}
+
+
+
+\end{document} 
